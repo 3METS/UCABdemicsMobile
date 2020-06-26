@@ -97,7 +97,7 @@ class _LoginPageState extends State<LoginPage> {
     return TextField(
       obscureText: true,
       decoration: InputDecoration(
-        labelText: 'Constraseña',
+        labelText: 'Contraseña',
         suffixIcon: Icon(Icons.visibility),
       ),
       onChanged: (valor){
