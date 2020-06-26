@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'package:ucabdemicsmobile/sources/Constants/constats.dart';
+
 class LoginPage extends StatefulWidget {
   LoginPage({Key key}) : super(key: key);
 
@@ -12,7 +14,6 @@ class _LoginPageState extends State<LoginPage> {
   String _email = '';
   String _password = '';
 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,16 +23,16 @@ class _LoginPageState extends State<LoginPage> {
           vertical: 10.0,
         ),
         children: <Widget>[
-          _startimage(),
+          logosmall01(),
           SizedBox(height: 20.0,),
-          _primarytext(),
+          _primarytext('Iniciar Sesion', '\nInicia sesión para continuar con la aplicación'),
           SizedBox(height: 40.0,),
           _inputemail(),
           _inputpassword(),
           SizedBox(height: 30.0,),
           _loginbutton(),
           SizedBox(height: 60.0,),
-          Center(child:Text('No tienes Cuenta?', style: TextStyle(color:Colors.grey),)),
+          Center(child:Text('¿No tienes Cuenta?', style: TextStyle(color:Colors.grey),)),
           _finalpiece(),
         ],
       ),
@@ -47,25 +48,25 @@ class _LoginPageState extends State<LoginPage> {
 
   }
 
-  Widget _primarytext() {
+  Widget _primarytext(String titulo, String titulo2) {
 
     return RichText(
       text: TextSpan(
         children: <TextSpan>[
           TextSpan(
-            text: 'Sign In \n',
+            text: titulo,
             style: TextStyle(
               color: Colors.black,
-              fontFamily: 'Poppins',
+              fontFamily: mainFont,
               fontWeight: FontWeight.normal,
               fontSize: 40.0,
             )
           ),
           TextSpan(
-            text: 'Sign in to continue our application',
+            text: titulo2,
             style: TextStyle(
               color: Colors.grey,
-              fontFamily: 'Poppins',
+              fontFamily: mainFont,
               fontWeight: FontWeight.normal,
             ),
           ),
@@ -96,7 +97,7 @@ class _LoginPageState extends State<LoginPage> {
     return TextField(
       obscureText: true,
       decoration: InputDecoration(
-        labelText: 'Password',
+        labelText: 'Constraseña',
         suffixIcon: Icon(Icons.visibility),
       ),
       onChanged: (valor){
@@ -114,8 +115,8 @@ class _LoginPageState extends State<LoginPage> {
       decoration: BoxDecoration(
         gradient: LinearGradient(
           colors: <Color>[
-            Color(0xFF40B4E5),
-            Color(0xFF06C452),
+            Color(color1_blue),
+            Color(color2_green),
           ],
         ),
         borderRadius: BorderRadius.circular(20),
@@ -128,7 +129,7 @@ class _LoginPageState extends State<LoginPage> {
         disabledTextColor: Colors.black,
         splashColor: Colors.white10,
         onPressed: () {},
-        child: Text("Sign In"),
+        child: Text("Iniciar Sesión"),
       ),
     );
 
@@ -144,7 +145,7 @@ class _LoginPageState extends State<LoginPage> {
         materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
         textColor: Colors.blue,
         onPressed: () {},
-        child: Text("Register"),
+        child: Text("Registrarse"),
       ),
     );
   }
