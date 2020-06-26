@@ -1,16 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:ucabdemicsmobile/Views/Register/register_page.dart';
 
 import 'package:ucabdemicsmobile/sources/Constants/constats.dart';
 
-class LoginPage extends StatefulWidget {
-  LoginPage({Key key}) : super(key: key);
+
+final double deviceHeight = 0;
+
+class registerpage extends StatefulWidget {
+  registerpage({Key key}) : super(key: key);
 
   @override
-  _LoginPageState createState() => _LoginPageState();
+  _registerpageState createState() => _registerpageState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _registerpageState extends State<registerpage> {
+
 
   String _email = '';
   String _password = '';
@@ -26,14 +29,15 @@ class _LoginPageState extends State<LoginPage> {
         children: <Widget>[
           logosmall01(),
           SizedBox(height: 20.0,),
-          _primarytext('Iniciar Sesion', '\nInicia sesión para continuar con la aplicación'),
-          SizedBox(height: 40.0,),
+          _primarytext('Registro', '\nRegistrese para iniciar con la aplicación'),
+          SizedBox(height: 30.0,),
           _inputemail(),
           _inputpassword(),
+          _inputconfirmpassword(),
           SizedBox(height: 30.0,),
           _loginbutton(),
-          SizedBox(height: 60.0,),
-          Center(child:Text('¿No tienes Cuenta?', style: TextStyle(color:Colors.grey),)),
+          SizedBox(height: 30.0,),
+          Center(child:Text('¿Ya tienes Cuenta?', style: TextStyle(color:Colors.grey),)),
           _finalpiece(),
         ],
       ),
@@ -89,7 +93,22 @@ class _LoginPageState extends State<LoginPage> {
     return TextField(
       obscureText: true,
       decoration: InputDecoration(
-        labelText: 'Constraseña',
+        labelText: 'Contraseña',
+        suffixIcon: Icon(Icons.visibility),
+      ),
+      onChanged: (valor){
+        _password = valor;
+      },
+    );
+
+  }
+
+  Widget _inputconfirmpassword() {
+
+    return TextField(
+      obscureText: true,
+      decoration: InputDecoration(
+        labelText: 'Confirmar Contraseña',
         suffixIcon: Icon(Icons.visibility),
       ),
       onChanged: (valor){
@@ -121,7 +140,7 @@ class _LoginPageState extends State<LoginPage> {
         disabledTextColor: Colors.black,
         splashColor: Colors.white10,
         onPressed: () {},
-        child: Text("Iniciar Sesión"),
+        child: Text("Registrarse"),
       ),
     );
 
@@ -138,14 +157,10 @@ class _LoginPageState extends State<LoginPage> {
         textColor: Colors.blue,
         onPressed: () {
 
-          final route = MaterialPageRoute(
-            builder: ( context ) => registerpage()
-          );
-
-          Navigator.push(context, route);
+          Navigator.pop(context);
 
         },
-        child: Text("Registrarse"),
+        child: Text("Iniciar Sesión"),
       ),
     );
   }

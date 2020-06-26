@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'Views/Login/login_page.dart';
+import 'Views/Register/register_page.dart';
 
 void main() => runApp(MyApp());
 
@@ -9,7 +10,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'UCABdemics Test',
       debugShowCheckedModeBanner: false,
-      home: LoginPage()
+      home: LoginPage(),
     );
   }
 }
