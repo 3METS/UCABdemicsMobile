@@ -7,7 +7,7 @@ const int color2_green = 0xFF06C452;
 
 Widget logosmall01(){
   return Image(
-      image: AssetImage('assets/images/logo/logo_small_0.1.png'),
-      alignment: Alignment.centerLeft,
-      );
+    image: AssetImage('lib/sources/assets/images/logo/logo_small_0.1.png'),
+    alignment: Alignment.centerLeft,
+  );
 }

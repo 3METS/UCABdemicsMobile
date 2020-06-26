@@ -41,7 +41,11 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/images/logo/
+    - lib/sources/assets/images/logo/logo_small_0.1.png
+    - lib/sources/assets/images/logo/logo_small_0.25.png
+    - lib/sources/assets/images/logo/logo_small_0.33.png
+    - lib/sources/assets/images/logo/logo_small_0.5.png
+    - lib/sources/assets/images/logo/logo_small_0.75.png
   #  - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
