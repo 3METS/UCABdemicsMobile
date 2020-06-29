@@ -11,3 +11,23 @@ Widget logosmall01(){
     alignment: Alignment.centerLeft,
   );
 }
+
+class Period{
+
+  int half;
+  int year;
+
+  Period(this.half, this.year);
+
+  static List<Period> getPeriod(){
+    return <Period>[
+      Period(15, 2019),
+      Period(25, 2019),
+      Period(15, 2020),
+      Period(25, 2020),
+      Period(15, 2021),
+      Period(25, 2021),
+    ];
+  }
+
+}
