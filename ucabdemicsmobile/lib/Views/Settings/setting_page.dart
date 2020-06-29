@@ -14,7 +14,7 @@ class SettingPage extends StatelessWidget {
           Container(
             padding: EdgeInsets.symmetric(horizontal: 12.0),
             child: FlatButton(
-              onPressed: () {}, 
+              onPressed: () {},
               child: Row(
                 children: <Widget>[
                   CircleAvatar(

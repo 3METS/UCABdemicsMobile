@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'Views/Login/login_page.dart';
 
+import 'sources/Constants/constats.dart';
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -11,6 +13,7 @@ class MyApp extends StatelessWidget {
         statusBarColor: Color(0xFF2E7D32),
       ));
     return MaterialApp(
+      theme: ThemeData(fontFamily: mainFont),
       title: 'UCABdemics Test',
       debugShowCheckedModeBanner: false,
       home: LoginPage(),
