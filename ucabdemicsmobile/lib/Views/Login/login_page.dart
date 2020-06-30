@@ -10,10 +10,6 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
-
-  String _email = '';
-  String _password = '';
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,15 +33,6 @@ class _LoginPageState extends State<LoginPage> {
         ],
       ),
     );
-  }
-
-  Widget _startimage(){
-
-    return Image(
-      image: AssetImage('assets/images/logo/logo_small_0.1.png'),
-      alignment: Alignment.centerLeft,
-      );
-
   }
 
   Widget _primarytext(String titulo, String titulo2) {
@@ -86,7 +73,6 @@ class _LoginPageState extends State<LoginPage> {
         suffixIcon: Icon(Icons.perm_identity),
       ),
       onChanged: (valor){
-        _email = valor;
       },
     );
 
@@ -101,7 +87,6 @@ class _LoginPageState extends State<LoginPage> {
         suffixIcon: Icon(Icons.visibility),
       ),
       onChanged: (valor){
-        _password = valor;
       },
     );
 
@@ -115,8 +100,8 @@ class _LoginPageState extends State<LoginPage> {
       decoration: BoxDecoration(
         gradient: LinearGradient(
           colors: <Color>[
-            Color(color1_blue),
-            Color(color2_green),
+            myBlue,
+            myGreen,
           ],
         ),
         borderRadius: BorderRadius.circular(20),
