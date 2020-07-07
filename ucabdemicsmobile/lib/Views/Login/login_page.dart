@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'package:ucabdemicsmobile/Views/MainMenu/main_menu_page.dart';
-import 'package:ucabdemicsmobile/Views/Register/register_page.dart';
 import 'package:ucabdemicsmobile/sources/Constants/constats.dart';
 
 class LoginPage extends StatefulWidget {
@@ -12,70 +10,32 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
-
-  String _email = '';
-  String _password = '';
-
   @override
   Widget build(BuildContext context) {
-
-    return LayoutBuilder(
-      builder: (BuildContext context, BoxConstraints constraints) {
-        if(constraints.maxHeight < 800){
-
-          return Scaffold(
-            body: ListView(
-              padding: EdgeInsets.symmetric(
-                horizontal: 30.0,
-                vertical: 10.0,
-              ),
-              children: <Widget>[
-                logosmall01(),
-                SizedBox(height: 20.0,),
-                _primarytext('Iniciar Sesion', '\nInicia sesión para continuar con la aplicación',40.0,10.0),
-                SizedBox(height: 40.0,),
-                _inputemail(),
-                _inputpassword(),
-                SizedBox(height: 30.0,),
-                _loginbutton(1,25.0),
-                SizedBox(height: 60.0,),
-                Center(child:Text('¿No tienes Cuenta?', style: TextStyle(color:Colors.grey),)),
-                _finalpiece(1),
-              ],
-            ),
-          );
-
-        } else {
-
-          return Scaffold(
-            body: ListView(
-              padding: EdgeInsets.symmetric(
-                horizontal: 30.0,
-                vertical: 10.0,
-              ),
-              children: <Widget>[
-                logosmall01(),
-                SizedBox(height: 100.0,),
-                _primarytext('Iniciar Sesion', '\nInicia sesión para continuar con la aplicación',45.0,21.0),
-                SizedBox(height: 50.0,),
-                _inputemail(),
-                SizedBox(height: 20.0,),
-                _inputpassword(),
-                SizedBox(height: 80.0,),
-                _loginbutton(1.3, 40.0),
-                SizedBox(height: 70.0,),
-                Center(child:Text('¿No tienes Cuenta?', style: TextStyle(color:Colors.grey, fontSize: 18),)),
-                _finalpiece(1.4),
-              ],
-            ),
-          );
-
-        }
-      },
+    return Scaffold(
+      body: ListView(
+        padding: EdgeInsets.symmetric(
+          horizontal: 30.0,
+          vertical: 10.0,
+        ),
+        children: <Widget>[
+          logosmall01(),
+          SizedBox(height: 20.0,),
+          _primarytext('Iniciar Sesion', '\nInicia sesión para continuar con la aplicación'),
+          SizedBox(height: 40.0,),
+          _inputemail(),
+          _inputpassword(),
+          SizedBox(height: 30.0,),
+          _loginbutton(),
+          SizedBox(height: 60.0,),
+          Center(child:Text('¿No tienes Cuenta?', style: TextStyle(color:Colors.grey),)),
+          _finalpiece(),
+        ],
+      ),
     );
   }
 
-  Widget _primarytext(String titulo, String titulo2, double fontsize1, double fontsize2) {
+  Widget _primarytext(String titulo, String titulo2) {
 
     return RichText(
       text: TextSpan(
@@ -86,7 +46,7 @@ class _LoginPageState extends State<LoginPage> {
               color: Colors.black,
               fontFamily: mainFont,
               fontWeight: FontWeight.normal,
-              fontSize: fontsize1,
+              fontSize: 40.0,
             )
           ),
           TextSpan(
@@ -95,7 +55,6 @@ class _LoginPageState extends State<LoginPage> {
               color: Colors.grey,
               fontFamily: mainFont,
               fontWeight: FontWeight.normal,
-              fontSize: fontsize2,
             ),
           ),
         ],
@@ -114,7 +73,6 @@ class _LoginPageState extends State<LoginPage> {
         suffixIcon: Icon(Icons.perm_identity),
       ),
       onChanged: (valor){
-        _email = valor;
       },
     );
 
@@ -125,27 +83,25 @@ class _LoginPageState extends State<LoginPage> {
     return TextField(
       obscureText: true,
       decoration: InputDecoration(
-        labelText: 'Constraseña',
+        labelText: 'Contraseña',
         suffixIcon: Icon(Icons.visibility),
       ),
       onChanged: (valor){
-        _password = valor;
       },
     );
 
   }
 
 
-  Widget _loginbutton(double textscale, double heightbutton) {
+  Widget _loginbutton() {
 
     return Container(
-      height: heightbutton,
       padding: EdgeInsets.all(0.0),
       decoration: BoxDecoration(
         gradient: LinearGradient(
           colors: <Color>[
-            Color(color1_blue),
-            Color(color2_green),
+            myBlue,
+            myGreen,
           ],
         ),
         borderRadius: BorderRadius.circular(20),
@@ -157,22 +113,14 @@ class _LoginPageState extends State<LoginPage> {
         disabledColor: Colors.grey,
         disabledTextColor: Colors.black,
         splashColor: Colors.white10,
-        onPressed: () {
-
-          final route = MaterialPageRoute(
-            builder: ( context ) => Mainmenupage()
-          );
-
-          Navigator.push(context, route);
-
-        },
-        child: Text("Iniciar Sesión", textScaleFactor: textscale,),
+        onPressed: () {},
+        child: Text("Iniciar Sesión"),
       ),
     );
 
   }
 
-  Widget _finalpiece(double fontsize) {
+  Widget _finalpiece() {
 
     return Container(
       height: 30,
@@ -181,16 +129,8 @@ class _LoginPageState extends State<LoginPage> {
       child:FlatButton(
         materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
         textColor: Colors.blue,
-        onPressed: () {
-
-          final route = MaterialPageRoute(
-            builder: ( context ) => registerpage()
-          );
-
-          Navigator.push(context, route);
-
-        },
-        child: Text("Registrarse", textScaleFactor: fontsize,),
+        onPressed: () {},
+        child: Text("Registrarse"),
       ),
     );
   }

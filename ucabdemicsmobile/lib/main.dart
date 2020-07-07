@@ -1,22 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'Views/Login/login_page.dart';
-
-import 'sources/Constants/constats.dart';
+//import 'Views/Login/login_page.dart';
+import 'sources/Components/navigation_bar.dart';
 
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-      SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-        statusBarColor: Color(0xFF2E7D32),
-      ));
     return MaterialApp(
-      theme: ThemeData(fontFamily: mainFont),
       title: 'UCABdemics Test',
       debugShowCheckedModeBanner: false,
-      home: LoginPage(),
+      home: Navigation()
     );
   }
 }
