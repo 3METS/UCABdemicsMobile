@@ -128,8 +128,8 @@ class _registerpageState extends State<registerpage> {
       decoration: BoxDecoration(
         gradient: LinearGradient(
           colors: <Color>[
-            Color(color1_blue),
-            Color(color2_green),
+            myBlue,
+            myGreen,
           ],
         ),
         borderRadius: BorderRadius.circular(20),
