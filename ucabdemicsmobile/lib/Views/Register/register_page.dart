@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'package:ucabdemicsmobile/Views/Settings/setting_page.dart';
-
 import 'package:ucabdemicsmobile/sources/Constants/constats.dart';
 
 
@@ -141,14 +139,7 @@ class _registerpageState extends State<registerpage> {
         disabledColor: Colors.grey,
         disabledTextColor: Colors.black,
         splashColor: Colors.white10,
-        onPressed: () {
-
-          final route = MaterialPageRoute(
-            builder: ( context ) => SettingPage()
-          );
-
-          Navigator.push(context, route);
-        },
+        onPressed: () {},
         child: Text("Registrarse"),
       ),
     );

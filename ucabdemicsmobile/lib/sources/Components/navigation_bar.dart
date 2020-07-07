@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import '../Constants/constats.dart';
 import '../../Views/class_plan/class_plan.dart';
+import '../../Views/MainMenu/main_menu_page.dart';
+import '../../Views/Settings/setting_page.dart';
 
 class Navigation extends StatefulWidget {
   @override
@@ -12,11 +14,11 @@ class Navigation extends StatefulWidget {
 class _NavigationState extends State<Navigation> {
 
   final tabs = [
-    ClassPlan(),
+    Mainmenupage(),
     Center(child: Text('Seguimiento')),
     Center(child: Text('Horario')),
     Center(child: Text('Notificaciones')),
-    Center(child: Text('Ajustes'))
+    SettingPage()
   ];
 
   int _currentIndex = 0;

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:ucabdemicsmobile/Views/MainMenu/main_menu_page.dart';
 import 'package:ucabdemicsmobile/Views/Register/register_page.dart';
+import 'package:ucabdemicsmobile/sources/Components/navigation_bar.dart';
 import 'package:ucabdemicsmobile/sources/Constants/constats.dart';
 
 class LoginPage extends StatefulWidget {
@@ -160,7 +161,7 @@ class _LoginPageState extends State<LoginPage> {
         onPressed: () {
 
           final route = MaterialPageRoute(
-            builder: ( context ) => Mainmenupage()
+            builder: ( context ) => Navigation()
           );
 
           Navigator.push(context, route);
