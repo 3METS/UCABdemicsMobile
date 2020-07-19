@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ucabdemicsmobile/Views/subject/subject_page.dart';
 
 import 'package:ucabdemicsmobile/sources/Constants/constats.dart';
 import 'package:ucabdemicsmobile/Views/MainMenu/subjectcard.dart';
@@ -89,11 +90,19 @@ class _MainmenupageState extends State<Mainmenupage> {
             contentPadding: EdgeInsets.symmetric(horizontal: 30.0),
             title: Text('Periodo Actual',style: TextStyle(color:Color(0xFF828282)),),
           ),
-          ListTile(
-            contentPadding: EdgeInsets.symmetric(horizontal: 30.0),
-            title: Text('Sistema de Base de Datos I'),
-            subtitle: Text('6 Evaluaciones'),
-            leading: Icon(Icons.insert_drive_file,color: Color(0xFFFFC526),),
+          FlatButton(
+            child: ListTile(
+              contentPadding: EdgeInsets.symmetric(horizontal: 30.0),
+              title: Text('Sistema de Base de Datos I'),
+              subtitle: Text('6 Evaluaciones'),
+              leading: Icon(Icons.insert_drive_file,color: Color(0xFFFFC526),),
+            ),
+            onPressed: (){
+              final route = MaterialPageRoute(
+                builder: ( context ) => SubjectPage()
+              );
+              Navigator.push(context, route);
+            },
           ),
           ListTile(
             contentPadding: EdgeInsets.symmetric(horizontal: 30.0),

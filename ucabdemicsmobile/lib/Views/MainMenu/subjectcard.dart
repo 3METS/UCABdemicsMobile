@@ -8,9 +8,8 @@ Widget periodsubject(){
       child:Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
-
           Text(
-            'Sistema de Bases de Datos I', 
+            'Sistema de Bases de Datos I',
             style: TextStyle(
               fontSize: 18.0,
               fontWeight: FontWeight.bold,
