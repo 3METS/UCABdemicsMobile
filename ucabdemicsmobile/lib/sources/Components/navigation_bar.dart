@@ -28,7 +28,7 @@ class _NavigationState extends State<Navigation> {
     return Scaffold(
       body: tabs[_currentIndex],
       bottomNavigationBar: SizedBox(
-        height: (MediaQuery.of(context).size.height)*0.1,
+        height: (MediaQuery.of(context).size.height)*0.102,
         child: BottomNavigationBar(
           currentIndex: _currentIndex,
           type: BottomNavigationBarType.shifting,
