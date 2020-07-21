@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 
 const String mainFont = 'Poppins';
+const List<String> months = ["Enero", "Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"];
 
 const MaterialColor myBlue = const MaterialColor (
-  0xFF40B4E5, 
+  0xFF40B4E5,
   const <int, Color>{
     1: const Color(0xFFC5E8F7),
     2: const Color(0xFF9ED9F1),
@@ -13,7 +14,7 @@ const MaterialColor myBlue = const MaterialColor (
 );
 
 const MaterialColor myGreen = const MaterialColor (
-  0xFF047732, 
+  0xFF047732,
   const <int, Color>{
     1: const Color(0xFFB3D6C1),
     2: const Color(0xFF80BA97),
@@ -23,7 +24,7 @@ const MaterialColor myGreen = const MaterialColor (
 );
 
 const MaterialColor myYellow = const MaterialColor (
-  0xFFFFC526, 
+  0xFFFFC526,
   const <int, Color>{
     1: const Color(0xFFFFEDBD),
     2: const Color(0xFFFFE292),
@@ -39,12 +40,9 @@ Widget logosmall01(){
 }
 
 class Period{
-
   int half;
   int year;
-
   Period(this.half, this.year);
-
   static List<Period> getPeriod(){
     return <Period>[
       Period(15, 2019),
@@ -55,5 +53,10 @@ class Period{
       Period(25, 2021),
     ];
   }
-
 }
+
+List<ListTile> temasList = [
+  ListTile(title: Text("Subtema 1.1"), subtitle: Text("Título Subtema"),),
+  ListTile(title: Text("Subtema 1.2"), subtitle: Text("Título Subtema"),),
+  ListTile(title: Text("Subtema 1.3"), subtitle: Text("Título Subtema"),),
+];

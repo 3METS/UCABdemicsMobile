@@ -30,7 +30,7 @@ class _NewTestPageState extends State<NewTestPage> {
       }
       break;
       case "1.0": {
-        return thirdStep();
+        return ThirdStep();
       }
       break;
     }
@@ -76,7 +76,8 @@ class _NewTestPageState extends State<NewTestPage> {
                 padding: EdgeInsets.all(15),
                 onPressed: () {
                   setState(() {
-                    _progress -= 0.5;
+                    if(_progress > 0.0)
+                      _progress -= 0.5;
                   });
                 },
                 child: Text(
@@ -92,6 +93,7 @@ class _NewTestPageState extends State<NewTestPage> {
                 padding: EdgeInsets.all(15),
                 onPressed: () {
                   setState(() {
+                    if(_progress < 1.0)
                     _progress += 0.5;
                   });
                 },

@@ -8,17 +8,18 @@ class FirstStep extends StatefulWidget {
 }
 
 class _FirstStepState extends State<FirstStep> {
-  String dropdownValue = 'One';
+  String dropdownValue = null;
 
   Widget dropmenu(){
     return DropdownButton<String>(
       isExpanded: true,
+      value: dropdownValue == null ? null : dropdownValue,
       icon: Icon(Icons.arrow_drop_down),
       iconSize: 24,
       elevation: 16,
       hint: Text("Tipo de Evaluación"),
       underline: Container(),
-      items: <String>['One', 'Two', 'Free', 'Four'].map<DropdownMenuItem<String>>((String value) {
+      items: <String>['Escrita', 'Practica', 'Oral'].map<DropdownMenuItem<String>>((String value) {
         return DropdownMenuItem<String>(
           value: value,
           child: Text(value),
