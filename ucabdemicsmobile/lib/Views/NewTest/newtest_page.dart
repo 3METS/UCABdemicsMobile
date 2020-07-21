@@ -26,7 +26,7 @@ class _NewTestPageState extends State<NewTestPage> {
       }
       break;
       case "0.5": {
-        return secondStep();
+        return SecondStep();
       }
       break;
       case "1.0": {
