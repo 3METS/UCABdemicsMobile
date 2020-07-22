@@ -92,10 +92,11 @@ class _NewTestPageState extends State<NewTestPage> {
                 textColor: Colors.white,
                 padding: EdgeInsets.all(15),
                 onPressed: () {
-                  setState(() {
-                    if(_progress < 1.0)
-                    _progress += 0.5;
-                  });
+                  if(_progress < 1.0)
+                    setState(() {
+                      _progress += 0.5;
+                    });
+                  else Navigator.of(context).pop();
                 },
                 child: Text(
                   _selectRightButton(),

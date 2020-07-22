@@ -55,8 +55,3 @@ class Period{
   }
 }
 
-List<ListTile> temasList = [
-  ListTile(title: Text("Subtema 1.1"), subtitle: Text("Título Subtema"),),
-  ListTile(title: Text("Subtema 1.2"), subtitle: Text("Título Subtema"),),
-  ListTile(title: Text("Subtema 1.3"), subtitle: Text("Título Subtema"),),
-];
