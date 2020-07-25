@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../Constants/constats.dart';
+import '../Constants/constants.dart';
 import '../../Views/class_plan/class_plan.dart';
 
 class Navigation extends StatefulWidget {
@@ -34,7 +34,7 @@ class _NavigationState extends State<Navigation> {
           backgroundColor: myGreen,
           selectedItemColor: Colors.white,
           showUnselectedLabels: false,
-          showSelectedLabels: true,
+          showSelectedLabels: false,
           items: [
             BottomNavigationBarItem(
               icon: Icon(Icons.assignment),

@@ -30,10 +30,3 @@ const MaterialColor myYellow = const MaterialColor (
     3: const Color(0xFFFFC526)
   }
 );
-
-Widget logosmall01(){
-  return Image(
-      image: AssetImage('assets/images/logo/logo_small_0.1.png'),
-      alignment: Alignment.centerLeft,
-      );
-}
