@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import '../../Views/Solicitude/solicitude_page.dart';
-import '../Constants/constats.dart';
+import '../Constants/constants.dart';
 import '../../Views/class_plan/class_plan.dart';
-import '../../Views/MainMenu/main_menu_page.dart';
 import '../../Views/Settings/setting_page.dart';
 
 class TracingCard extends StatelessWidget{

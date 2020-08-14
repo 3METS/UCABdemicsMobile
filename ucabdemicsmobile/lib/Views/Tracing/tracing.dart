@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ucabdemicsmobile/sources/Components/main_appbar.dart';
 import 'package:ucabdemicsmobile/sources/Components/tracing_card.dart';
 
-import '../../sources/Constants/constats.dart';
+import '../../sources/Constants/constants.dart';
 
 class Tracing extends StatelessWidget {
 
@@ -22,7 +22,7 @@ class Tracing extends StatelessWidget {
 
           children: <Widget>[
             TracingCard(
-              nrc: "12345",
+              nrc: "15633",
             )
           ],
         ),
