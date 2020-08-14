@@ -39,7 +39,7 @@ class _FirstStepState extends State<FirstStep> {
       child: Column(
         children: <Widget>[
           Text("Información Básica", style: TextStyle(fontSize: 16.0,fontWeight: FontWeight.bold),),
-          SizedBox(height: 20.0,),
+          SizedBox(height: 25.0,),
           SingleChildScrollView(
             scrollDirection: Axis.vertical,
             child: Column(

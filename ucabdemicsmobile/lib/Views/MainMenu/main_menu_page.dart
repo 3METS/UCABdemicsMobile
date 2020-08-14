@@ -53,11 +53,12 @@ class _MainmenupageState extends State<Mainmenupage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: ListView(
+        padding: EdgeInsets.all(MediaQuery.of(context).size.width*0.02),
         children: <Widget>[
           ListTile(
             title: Text(
               'Planes de Clase',
-              textScaleFactor: 1.8,
+              textScaleFactor: MediaQuery.of(context).size.width*0.0055,
               style: TextStyle(
                 color: Color(0xFF1D5066),
                 fontWeight: FontWeight.bold

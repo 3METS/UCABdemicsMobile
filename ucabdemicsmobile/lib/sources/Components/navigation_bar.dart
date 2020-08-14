@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../Views/Solicitude/solicitude_page.dart';
 import '../Constants/constats.dart';
 import '../../Views/class_plan/class_plan.dart';
 import '../../Views/MainMenu/main_menu_page.dart';
@@ -17,7 +18,7 @@ class _NavigationState extends State<Navigation> {
     Mainmenupage(),
     Center(child: Text('Seguimiento')),
     Center(child: Text('Horario')),
-    Center(child: Text('Notificaciones')),
+    SolicitudePage(),
     SettingPage()
   ];
 
@@ -55,7 +56,7 @@ class _NavigationState extends State<Navigation> {
               ),
             BottomNavigationBarItem(
               icon: Icon(Icons.notifications_none),
-              title: Text('Notificaciones'),
+              title: Text('Solicitudes'),
               backgroundColor: myGreen,
               ),
             BottomNavigationBarItem(

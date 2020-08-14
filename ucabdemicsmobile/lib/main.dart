@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'package:ucabdemicsmobile/Views/Login/login_page.dart';
-//import 'Views/Login/login_page.dart';
 import 'sources/Components/navigation_bar.dart';
 
 void main() => runApp(MyApp());
@@ -16,4 +15,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
