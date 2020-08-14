@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ucabdemicsmobile/Middleware/asignatura/asignatura.dart';
 import 'package:ucabdemicsmobile/Middleware/asignatura/datos_competencias.dart';
-import 'package:ucabdemicsmobile/Views/class_plan_data/contenidos.dart';
-import 'package:ucabdemicsmobile/sources/Components/asignatura_appbar.dart';
 import 'package:ucabdemicsmobile/sources/Constants/constants.dart';
 
 class Competencias extends StatelessWidget {
@@ -12,31 +9,11 @@ class Competencias extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AsignaturaAppBar(
-          title: Asignatura.getNombre(nrc),
-          titleColor: Colors.white,
-          backgroundColor: myBlue[4],
-        ),
-        floatingActionButton: FloatingActionButton(
-          onPressed: () {
-            final route =
-                MaterialPageRoute(builder: (context) => Contenidos(nrc: nrc));
-            Navigator.push(context, route);
-          },
-          child: Icon(Icons.add),
-          backgroundColor: myYellow,
-        ),
-        body: Column(
-          children: <Widget>[
-            SizedBox(height: 120.0),
-            Expanded(
-              child: ListView(
-                children: _crearItemsCompetencia(context),
-              ),
-            ),
-          ],
-        ));
+    return Expanded(
+      child: ListView(
+        children: _crearItemsCompetencia(context),
+      ),
+    );
   }
 
   List<Widget> _crearItemsCompetencia(BuildContext context) {
@@ -60,9 +37,7 @@ class Competencias extends StatelessWidget {
           ),
         ],
       ));
-      lista.add(
-        SizedBox(height:5.0)
-      );
+      lista.add(SizedBox(height: 5.0));
       lista.add(Row(
         mainAxisAlignment: MainAxisAlignment.start,
         children: <Widget>[
@@ -72,15 +47,16 @@ class Competencias extends StatelessWidget {
           Text(
             itemContenido.contenido,
             style: TextStyle(
-                fontSize: 15, color: Colors.grey[800], fontWeight: FontWeight.w400),
+                fontSize: 15,
+                color: Colors.grey[800],
+                fontWeight: FontWeight.w400),
           ),
         ],
       ));
 
       for (Unidad itemUnidad in itemContenido.unidades) {
-
         List<Widget> listaAtributos = new List<Widget>();
-        bool stateUnidad= true;
+        bool stateUnidad = true;
         for (Atributo itemAtributo in itemUnidad.atributos) {
           final tempWidget = ListTile(
               contentPadding: EdgeInsets.only(left: 30.0, right: 30.0),
@@ -99,10 +75,10 @@ class Competencias extends StatelessWidget {
                     fontWeight: FontWeight.w400),
               ),
               leading: Icon(
-                      Icons.check_circle_outline,
-                      color: Colors.white,
-                      size: 30.0,
-                  ),
+                Icons.check_circle_outline,
+                color: Colors.white,
+                size: 30.0,
+              ),
               trailing: itemAtributo.logrado == true
                   ? Icon(
                       Icons.check_circle_outline,
@@ -117,48 +93,48 @@ class Competencias extends StatelessWidget {
           listaAtributos.add(tempWidget);
           stateUnidad = stateUnidad && itemAtributo.logrado;
         }
-        listaUnidades.add(
-          Theme(
-            data:Theme.of(context).copyWith(dividerColor: Colors.transparent),
-            child: ExpansionTile(
+        listaUnidades.add(Theme(
+          data: Theme.of(context).copyWith(dividerColor: Colors.transparent),
+          child: ExpansionTile(
             title: Text(
-                  itemUnidad.numero,
-                  style: TextStyle(
-                      fontSize: 16,
-                      color: Colors.black,
-                      fontWeight: FontWeight.w400),
-                ),
-                subtitle: Text(
-                  itemUnidad.contenido,
-                  style: TextStyle(
-                      fontSize: 14,
-                      color: Colors.grey[700],
-                      fontWeight: FontWeight.w400),
-                ),
-                leading: stateUnidad == true
-                  ? Icon(
-                      Icons.check_circle_outline,
-                      color: myGreen,
-                      size: 30.0,
-                    )
-                  : Icon(
-                      Icons.error_outline,
-                      color: myYellow,
-                      size: 30.0,
-                    ),
-              children: listaAtributos,
-              ),
-          ));
+              itemUnidad.numero,
+              style: TextStyle(
+                  fontSize: 16,
+                  color: Colors.black,
+                  fontWeight: FontWeight.w400),
+            ),
+            subtitle: Text(
+              itemUnidad.contenido,
+              style: TextStyle(
+                  fontSize: 14,
+                  color: Colors.grey[700],
+                  fontWeight: FontWeight.w400),
+            ),
+            leading: stateUnidad == true
+                ? Icon(
+                    Icons.check_circle_outline,
+                    color: myGreen,
+                    size: 30.0,
+                  )
+                : Icon(
+                    Icons.error_outline,
+                    color: myYellow,
+                    size: 30.0,
+                  ),
+            children: listaAtributos,
+          ),
+        ));
         listaUnidades.add(Divider(
-            indent: 20.0,
-            endIndent: 20.0,
-          ));    
+          indent: 20.0,
+          endIndent: 20.0,
+        ));
       }
 
       listaUnidades.removeLast();
 
       lista.add(Container(
-          padding: EdgeInsets.only(left:40.0, right:40.0, top:20.0, bottom:20.0),
+          padding:
+              EdgeInsets.only(left: 40.0, right: 40.0, top: 20.0, bottom: 20.0),
           child: Container(
               decoration: BoxDecoration(
                   border: Border.all(color: Colors.grey[350]),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:ucabdemicsmobile/Views/class_plan_data/contenidos.dart';
+import 'package:ucabdemicsmobile/Views/class_plan_data/datos_planclase.dart';
 import 'package:ucabdemicsmobile/sources/Constants/constants.dart';
 import '../../Middleware/asignatura/datos_asignatura.dart';
 
@@ -22,7 +22,7 @@ class SemestreCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(20),
         splashColor: myBlue[1],
         onTap: () {
-          final route = MaterialPageRoute(builder: (context) => Contenidos(nrc: DatosAsignatura.getAsignaturas(selectedSemestre)[value].nrc));
+          final route = MaterialPageRoute(builder: (context) => DatosPlanClase(nrc:DatosAsignatura.getAsignaturas(selectedSemestre)[value].nrc));
           Navigator.push(context, route);
         },
         child: Container(

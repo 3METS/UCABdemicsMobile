@@ -1,43 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:ucabdemicsmobile/Middleware/asignatura/asignatura.dart';
 import 'package:ucabdemicsmobile/Middleware/asignatura/datos_evaluaciones.dart';
-import 'package:ucabdemicsmobile/Views/class_plan_data/competencias.dart';
-import 'package:ucabdemicsmobile/sources/Components/asignatura_appbar.dart';
-import 'package:ucabdemicsmobile/sources/Constants/constants.dart';
 
-// ignore: must_be_immutable
 class Evaluaciones extends StatelessWidget {
-  String nrc;
+  final String nrc;
 
   Evaluaciones({this.nrc}) : assert(nrc != null);
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AsignaturaAppBar(
-          title: Asignatura.getNombre(nrc),
-          titleColor: Colors.white,
-          backgroundColor: myBlue[4],
-        ),
-        floatingActionButton: FloatingActionButton(
-          onPressed: () {
-            final route =
-                MaterialPageRoute(builder: (context) => Competencias(nrc: nrc));
-            Navigator.push(context, route);
-          },
-          child: Icon(Icons.add),
-          backgroundColor: myYellow,
-        ),
-        body: Column(
-          children: <Widget>[
-            SizedBox(height: 120.0),
-            Expanded(
-              child: ListView(
-                children: _crearItemsEvaluaciones(),
-              ),
-            ),
-          ],
-        ));
+    return Expanded(
+      child: ListView(
+        children: _crearItemsEvaluaciones(),
+      ),
+    );
   }
 
   List<Widget> _crearItemsEvaluaciones() {
@@ -61,7 +36,7 @@ class Evaluaciones extends StatelessWidget {
                 fontWeight: FontWeight.w400),
           ),
           trailing: PopupMenuButton<Object>(
-            icon:Icon(
+            icon: Icon(
               Icons.more_vert,
               color: Colors.grey[700],
               size: 30.0,
@@ -100,7 +75,8 @@ class Evaluaciones extends StatelessWidget {
     listaEvaluaciones.removeLast();
 
     lista.add(Container(
-        padding: EdgeInsets.only(left:40.0, right:40.0, top:20.0, bottom:20.0),
+        padding:
+            EdgeInsets.only(left: 40.0, right: 40.0, top: 20.0, bottom: 20.0),
         child: Container(
             decoration: BoxDecoration(
                 border: Border.all(color: Colors.grey[350]),
