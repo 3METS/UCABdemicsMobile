@@ -47,16 +47,16 @@ class Competencia{
           Competencia('Competencia 2','Contenido del Tema 2',<Unidad>[
             Unidad('Unidad 1','Contenido de la unidad 1',<Atributo>[
               Atributo('Atributo 1','contenido del atributo 1',true),
-              Atributo('Atributo 2','contenido del atributo 2',true),
+              Atributo('Atributo 2','contenido del atributo 2',false),
               Atributo('Atributo 3','contenido del atributo 3',true),
             ]),
             Unidad('Unidad 2','Contenido de la unidad 2',<Atributo>[
               Atributo('Atributo 1','contenido del atributo 1',false),
               Atributo('Atributo 2','contenido del atributo 2',true),
-              Atributo('Atributo 3','contenido del atributo 3',false),
+              Atributo('Atributo 3','contenido del atributo 3',true),
             ]),
             Unidad('Unidad 3','Contenido de la unidad 3',<Atributo>[
-              Atributo('Atributo 1','contenido del atributo 1',false),
+              Atributo('Atributo 1','contenido del atributo 1',true),
               Atributo('Atributo 2','contenido del atributo 2',true),
               Atributo('Atributo 3','contenido del atributo 3',true),
             ]),
@@ -64,17 +64,17 @@ class Competencia{
           ),
           Competencia('Competencia 3','Contenido del Tema 3',<Unidad>[
             Unidad('Unidad 1','Contenido de la unidad 1',<Atributo>[
-              Atributo('Atributo 1','contenido del atributo 1',true),
+              Atributo('Atributo 1','contenido del atributo 1',false),
               Atributo('Atributo 2','contenido del atributo 2',true),
               Atributo('Atributo 3','contenido del atributo 3',true),
             ]),
             Unidad('Unidad 2','Contenido de la unidad 2',<Atributo>[
-              Atributo('Atributo 1','contenido del atributo 1',false),
+              Atributo('Atributo 1','contenido del atributo 1',true),
               Atributo('Atributo 2','contenido del atributo 2',true),
-              Atributo('Atributo 3','contenido del atributo 3',false),
+              Atributo('Atributo 3','contenido del atributo 3',true),
             ]),
             Unidad('Unidad 3','Contenido de la unidad 3',<Atributo>[
-              Atributo('Atributo 1','contenido del atributo 1',false),
+              Atributo('Atributo 1','contenido del atributo 1',true),
               Atributo('Atributo 2','contenido del atributo 2',true),
               Atributo('Atributo 3','contenido del atributo 3',true),
             ]),

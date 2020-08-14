@@ -30,3 +30,11 @@ const MaterialColor myYellow = const MaterialColor (
     3: const Color(0xFFFFC526)
   }
 );
+
+const MaterialColor myGrey = const MaterialColor (
+  0xFFF2F2F2, 
+  const <int, Color>{
+    1: const Color(0xFFF2F2F2),
+    2: const Color(0xFFE0E0E0),
+  }
+);
