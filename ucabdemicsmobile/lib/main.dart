@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-//import 'Views/Login/login_page.dart';
 import 'sources/Components/navigation_bar.dart';
 
 void main() => runApp(MyApp());

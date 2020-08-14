@@ -1,35 +1,33 @@
 import 'package:flutter/material.dart';
 
-
 // ignore: must_be_immutable
-class MainAppBar extends StatelessWidget implements PreferredSizeWidget{
-  final double _preferredHeight =120.0;
+class MainAppBar extends StatelessWidget implements PreferredSizeWidget {
 
+  double _preferredHeight = 100.0;
   String title;
   Color titleColor, backgroundColor;
+  double height;
 
-  MainAppBar({this.title,this.titleColor,this.backgroundColor}):
-    assert(title != null),
-    assert(titleColor != null),
-    assert(backgroundColor != null);
-
-
+  MainAppBar({this.title, this.titleColor, this.backgroundColor})
+      : assert(title != null),
+        assert(titleColor != null),
+        assert(backgroundColor != null);
+  
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SafeArea(
+      child: Container(
       height: _preferredHeight,
       alignment: Alignment.center,
-      padding: EdgeInsets.only(top:40.0),
-      color:backgroundColor,
+      color: backgroundColor,
       child: 
-        Text(
-          title,
-          style: TextStyle(
-            color: titleColor,
-            fontSize: 35.0,
-            fontWeight: FontWeight.w900
+          Text(
+            title,
+            style: TextStyle(
+              color: titleColor, fontSize: 35.0, fontWeight: FontWeight.w900),
+            textAlign: TextAlign.center,     
           ),
-        ),
+      ),
     );
   }
 
