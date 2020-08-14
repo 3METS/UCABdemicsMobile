@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ucabdemicsmobile/Views/Tracing/tracing.dart';
 import '../../Views/Solicitude/solicitude_page.dart';
 import '../Constants/constats.dart';
 import '../../Views/class_plan/class_plan.dart';
@@ -16,7 +17,7 @@ class _NavigationState extends State<Navigation> {
 
   final tabs = [
     Mainmenupage(),
-    Center(child: Text('Seguimiento')),
+    Tracing(),
     Center(child: Text('Horario')),
     SolicitudePage(),
     SettingPage()

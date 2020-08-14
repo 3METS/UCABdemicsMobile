@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:ucabdemicsmobile/Views/Login/login_page.dart';
+import '../../sources/Components/navigation_bar.dart';
+
 
 class SettingPage extends StatelessWidget {
   @override
@@ -55,7 +56,7 @@ class SettingPage extends StatelessWidget {
             onTap: () {
 
               final route = MaterialPageRoute(
-                builder: ( context ) => LoginPage()
+                builder: ( context ) => Navigation()
               );
               Navigator.push(context, route);
 

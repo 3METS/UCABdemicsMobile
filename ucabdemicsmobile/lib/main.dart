@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:ucabdemicsmobile/Views/Login/login_page.dart';
+import 'Views/MainMenu/main_menu_page.dart';
+import 'sources/Components/navigation_bar.dart';
 import 'sources/Components/navigation_bar.dart';
 
 void main() => runApp(MyApp());
@@ -11,7 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'UCABdemics Test',
       debugShowCheckedModeBanner: false,
-      home: LoginPage()
+      home: Navigation()
     );
   }
 }
