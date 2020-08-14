@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ucabdemicsmobile/Views/Tracing/tracing.dart';
-import '../../Views/Solicitude/solicitude_page.dart';
-import '../Constants/constats.dart';
+import '../Constants/constants.dart';
 import '../../Views/class_plan/class_plan.dart';
-import '../../Views/MainMenu/main_menu_page.dart';
-import '../../Views/Settings/setting_page.dart';
 
 class Navigation extends StatefulWidget {
   @override
@@ -16,11 +12,11 @@ class Navigation extends StatefulWidget {
 class _NavigationState extends State<Navigation> {
 
   final tabs = [
-    Mainmenupage(),
-    Tracing(),
+    ClassPlan(),
+    Center(child: Text('Seguimiento')),
     Center(child: Text('Horario')),
-    SolicitudePage(),
-    SettingPage()
+    Center(child: Text('Notificaciones')),
+    Center(child: Text('Ajustes'))
   ];
 
   int _currentIndex = 0;
@@ -30,7 +26,7 @@ class _NavigationState extends State<Navigation> {
     return Scaffold(
       body: tabs[_currentIndex],
       bottomNavigationBar: SizedBox(
-        height: (MediaQuery.of(context).size.height)*0.102,
+        height: (MediaQuery.of(context).size.height)*0.1,
         child: BottomNavigationBar(
           currentIndex: _currentIndex,
           type: BottomNavigationBarType.shifting,
@@ -38,7 +34,7 @@ class _NavigationState extends State<Navigation> {
           backgroundColor: myGreen,
           selectedItemColor: Colors.white,
           showUnselectedLabels: false,
-          showSelectedLabels: true,
+          showSelectedLabels: false,
           items: [
             BottomNavigationBarItem(
               icon: Icon(Icons.assignment),
@@ -57,7 +53,7 @@ class _NavigationState extends State<Navigation> {
               ),
             BottomNavigationBarItem(
               icon: Icon(Icons.notifications_none),
-              title: Text('Solicitudes'),
+              title: Text('Notificaciones'),
               backgroundColor: myGreen,
               ),
             BottomNavigationBarItem(
