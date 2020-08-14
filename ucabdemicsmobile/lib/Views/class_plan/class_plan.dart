@@ -22,8 +22,8 @@ class _ClassPlanState extends State<ClassPlan> {
       backgroundColor: Colors.white,
       appBar: MainAppBar(
           title: 'Planes de clase',
-          titleColor: myGreen,
-          backgroundColor: Colors.white),
+          titleColor: myBlue[4],
+          backgroundColor: Colors.white,),
       body: Container(
           height: MediaQuery.of(context).size.height,
           width: MediaQuery.of(context).size.width,

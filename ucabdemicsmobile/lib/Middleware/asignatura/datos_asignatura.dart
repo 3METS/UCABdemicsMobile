@@ -13,30 +13,36 @@ class DatosAsignatura {
       case '2020-25':
         return <DatosAsignatura>[
           DatosAsignatura(
-              '24268', 'Algoritmos y programación I', 2, 6, 'Ricardo Castellanos'),
+              '25001', 'Algoritmos y programación I', 2, 6, 'Ricardo Castellanos'),
           DatosAsignatura(
-              '24268', 'Sistema de Base de Datos I', 6, 4, 'Mauricio Morales'),
+              '25002', 'Sistema de Base de Datos I', 6, 4, 'Mauricio Morales'),
           DatosAsignatura(
-              '25633', 'Electiva:Calidad del Software', 8, 6, 'Miguel Zamora'),
+              '25003', 'Electiva:Calidad del Software', 8, 6, 'Miguel Zamora'),
         ];
       case '2020-15':
         return <DatosAsignatura>[
           DatosAsignatura(
-              '14268', 'Algoritmos y programación I', 2, 7, 'Maria Ordaz'),
+              '14001', 'Algoritmos y programación III', 2, 7, 'Maria Ordaz'),
           DatosAsignatura(
-              '15633', 'Algoritmos y programación II', 3, 5, 'Javier Hernandez'),
+              '14002', 'Calculo II', 3, 5, 'Javier Hernandez'),
           DatosAsignatura(
-              '14268', 'Sistema de Base de Datos I', 6, 5, 'Tania Gutierrez'),
+              '14003', 'Matematicas Discretas', 6, 5, 'Tania Gutierrez'),
           DatosAsignatura(
-              '15133', 'Desarrollo del Software', 8, 4, 'Luis Saavedra'),
+              '14004', 'Desarrollo del Software', 8, 4, 'Luis Saavedra'),
         ];
-      default: 
+      case '2019-25': 
         return <DatosAsignatura>[
           DatosAsignatura(
-              '25168', 'Algoritmos y programación I', 2, 6, 'Adrian Luces'),
+              '25004', 'Ingenieria del Software', 2, 6, 'Adrian Luces'),
           DatosAsignatura(
-              '24168', 'Sistema de Base de Datos I', 6, 3, 'Brenda Ramos'),
+              '25005', 'Sistema de Base de Datos II', 6, 3, 'Juan Fonseca'),
+          DatosAsignatura(
+              '25006', 'Sistemas Operativos', 6, 5, 'Tania Gutierrez'),
+          DatosAsignatura(
+              '25007', 'Interacción Humano Computador', 8, 4, 'Luis Saavedra'),
         ];
+      default: 
+        return <DatosAsignatura>[];
     }
   }
 
@@ -46,8 +52,10 @@ class DatosAsignatura {
         return 3;
       case '2020-15':
         return 4;
+      case '2019-25':
+        return 4;
       default:
-        return 2;
+        return 0;
     }
   }
 

@@ -8,9 +8,6 @@ class Semestre {
       Semestre('2020-25'),
       Semestre('2020-15'),
       Semestre('2019-25'),
-      Semestre('2019-15'),
-      Semestre('2018-25'),
-      Semestre('2018-15'),
     ];
   }
 

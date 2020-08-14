@@ -30,6 +30,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.2
   dropdownfield: ^1.0.3
+  cupertino_tabbar: ^1.0.1
 
 dev_dependencies:
   flutter_test:
