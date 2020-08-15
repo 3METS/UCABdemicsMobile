@@ -4,15 +4,15 @@ import 'package:ucabdemicsmobile/Middleware/asignatura/datos_evaluaciones.dart';
 class Evaluaciones extends StatelessWidget {
   final String nrc;
 
-  Evaluaciones({this.nrc}) : assert(nrc != null);
+  Evaluaciones({this.nrc}):assert(nrc!=null);
 
   @override
   Widget build(BuildContext context) {
     return Expanded(
-      child: ListView(
-        children: _crearItemsEvaluaciones(),
-      ),
-    );
+              child: ListView(
+                children: _crearItemsEvaluaciones(),
+              ),
+        );
   }
 
   List<Widget> _crearItemsEvaluaciones() {
@@ -36,7 +36,7 @@ class Evaluaciones extends StatelessWidget {
                 fontWeight: FontWeight.w400),
           ),
           trailing: PopupMenuButton<Object>(
-            icon: Icon(
+            icon:Icon(
               Icons.more_vert,
               color: Colors.grey[700],
               size: 30.0,
@@ -75,8 +75,7 @@ class Evaluaciones extends StatelessWidget {
     listaEvaluaciones.removeLast();
 
     lista.add(Container(
-        padding:
-            EdgeInsets.only(left: 40.0, right: 40.0, top: 20.0, bottom: 20.0),
+        padding: EdgeInsets.only(left:40.0, right:40.0, top:20.0, bottom:20.0),
         child: Container(
             decoration: BoxDecoration(
                 border: Border.all(color: Colors.grey[350]),

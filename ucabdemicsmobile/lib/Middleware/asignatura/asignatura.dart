@@ -27,9 +27,21 @@ class Asignatura {
         return 'Matematicas Discretas';
       case '14004':
         return 'Desarrollo del Software';
-      default: 
+      default:
         return 'No existe ese NRC';
     }
   }
 
+  static List<String> getAsignaturas(String semestre) {
+    switch (semestre) {
+      case '2020-25':
+        return <String>['Algoritmos y programación I','Sistema de Base de Datos I','Electiva:Calidad del Software'];
+      case '2020-15':
+        return <String>['Algoritmos y programación III','Calculo II','Matematicas Discretas', 'Desarrollo del Software'];
+      case '2019-25':
+        return <String>['Ingenieria del Software','Sistema de Base de Datos II','Sistemas Operativos','Interacción Humano Computador']; 
+      default:
+        return <String>['No asignaturas'];
+    }
+  }
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ucabdemicsmobile/Views/horario/horario.dart';
 import '../Constants/constants.dart';
 import '../../Views/class_plan/class_plan.dart';
 
@@ -14,7 +15,7 @@ class _NavigationState extends State<Navigation> {
   final tabs = [
     ClassPlan(),
     Center(child: Text('Seguimiento')),
-    Center(child: Text('Horario')),
+    Horario(),
     Center(child: Text('Notificaciones')),
     Center(child: Text('Ajustes'))
   ];
