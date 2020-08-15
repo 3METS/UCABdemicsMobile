@@ -1,0 +1,96 @@
+{
+    "asignatura":[
+        {
+            "semestre": "2020-25",
+            "asignaturas_semestre":[
+                {
+                    "nrc":25001,
+                    "nombre": "Algoritmos y programación I",
+                    "semestre": 2,
+                    "nroEvaluaciones": 6,
+                    "delegado": "Ricardo Castellanos"
+                },
+                {
+                    "nrc":25002,
+                    "nombre": "Sistema de Base de Datos I",
+                    "semestre": 6,
+                    "nroEvaluaciones": 4,
+                    "delegado": "Mauricio Morales"
+                },
+                {
+                    "nrc":25003,
+                    "nombre": "Electiva:Calidad del Software",
+                    "semestre": 8,
+                    "nroEvaluaciones": 6,
+                    "delegado": "Miguel Zamora"
+                }
+            ]
+        },
+        {
+            "semestre": "2020-15",
+            "asignaturas_semestre":[
+                {
+                    "nrc":14001,
+                    "nombre": "Algoritmos y programación III",
+                    "semestre": 2,
+                    "nroEvaluaciones": 7,
+                    "delegado": "Maria Ordaz"
+                },
+                {
+                    "nrc":14002,
+                    "nombre": "Calculo II",
+                    "semestre": 3,
+                    "nroEvaluaciones": 5,
+                    "delegado": "Javier Hernandez"
+                },
+                {
+                    "nrc":14003,
+                    "nombre": "Matematicas Discretas",
+                    "semestre": 6,
+                    "nroEvaluaciones": 5,
+                    "delegado": "Tania Gutierrez"
+                },
+                {
+                    "nrc":14004,
+                    "nombre": "Desarrollo del Software",
+                    "semestre": 8,
+                    "nroEvaluaciones": 4,
+                    "delegado": "Luis Saavedra"
+                }
+            ]
+        },
+        {
+            "semestre": "2019-25",
+            "asignaturas_semestre":[
+                {
+                    "nrc":25004,
+                    "nombre": "Ingenieria del Software",
+                    "semestre": 2,
+                    "nroEvaluaciones": 6,
+                    "delegado": "Adrian Luces"
+                },
+                {
+                    "nrc":25005,
+                    "nombre": "Sistema de Base de Datos II",
+                    "semestre": 6,
+                    "nroEvaluaciones": 3,
+                    "delegado": "Juan Fonseca"
+                },
+                {
+                    "nrc":25006,
+                    "nombre": "Sistemas Operativos",
+                    "semestre": 6,
+                    "nroEvaluaciones": 5,
+                    "delegado": "Tania Gutierrez"
+                },
+                {
+                    "nrc":25007,
+                    "nombre": "Interacción Humano Computador",
+                    "semestre": 8,
+                    "nroEvaluaciones": 4,
+                    "delegado": "Luis Saavedra"
+                }
+            ]
+        }
+    ]
+}
