@@ -51,7 +51,7 @@ class _SeguimientoItemCardState extends State<SeguimientoItemCard> {
               ListTile(
                 onTap: (){
                   final route = MaterialPageRoute(
-                    builder: ( context ) => SeguimientoSubjectPage(subjectName: widget.subjectName)
+                    builder: ( context ) => SeguimientoSubjectPage(subjectName: widget.subjectName, subjectPercentaje: widget.subjectPercentaje,)
                   );
                   Navigator.push(context, route);
                 },
