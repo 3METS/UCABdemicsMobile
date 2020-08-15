@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ucabdemicsmobile/Views/Solicitude/new_solicitude_page.dart';
 import 'package:ucabdemicsmobile/Views/Solicitude/solicitudeTile.dart';
-import 'package:ucabdemicsmobile/sources/Constants/constats.dart';
 
 class SolicitudePage extends StatefulWidget {
   SolicitudePage({Key key}) : super(key: key);

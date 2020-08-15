@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart';
-import 'package:ucabdemicsmobile/sources/Constants/constats.dart';
+import 'package:ucabdemicsmobile/sources/Constants/constants.dart';
 
 class SeguimientoSubjectPage extends StatefulWidget {
   final String subjectName;

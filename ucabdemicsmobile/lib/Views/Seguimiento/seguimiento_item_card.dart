@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ucabdemicsmobile/Views/Seguimiento/seguimiento_provider.dart';
 import 'package:ucabdemicsmobile/Views/Seguimiento/seguimiento_subject_page.dart';
-import 'package:ucabdemicsmobile/sources/Constants/constats.dart';
+import 'package:ucabdemicsmobile/sources/Constants/constants.dart';
 import 'package:flutter/foundation.dart';
 
 class SeguimientoItemCard extends StatefulWidget {

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/material/date_picker.dart';
-import 'package:ucabdemicsmobile/sources/Constants/constats.dart';
+import 'package:ucabdemicsmobile/sources/Constants/constants.dart';
 
 class SecondStep extends StatefulWidget {
   SecondStep({Key key}) : super(key: key);
@@ -12,7 +11,7 @@ class SecondStep extends StatefulWidget {
 class _SecondStepState extends State<SecondStep> {
 
   List<String> _lItems = [];
-  final TextEditingController _eCtrl = new TextEditingController();
+  //final TextEditingController _eCtrl = new TextEditingController();
 
   DateTime _dateTime;
   String _dateaux = "";

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ucabdemicsmobile/Views/Seguimiento/seguimiento_item_card.dart';
 import 'package:ucabdemicsmobile/Views/Seguimiento/seguimiento_provider.dart';
-import 'package:ucabdemicsmobile/sources/Constants/constats.dart';
 
 class SeguimientoPage extends StatefulWidget {
   SeguimientoPage({Key key}) : super(key: key);
