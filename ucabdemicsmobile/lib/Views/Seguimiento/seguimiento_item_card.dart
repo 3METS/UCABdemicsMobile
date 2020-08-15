@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ucabdemicsmobile/Views/Seguimiento/seguimiento_provider.dart';
+import 'package:ucabdemicsmobile/Views/Seguimiento/seguimiento_subject_page.dart';
 import 'package:ucabdemicsmobile/sources/Constants/constats.dart';
 import 'package:flutter/foundation.dart';
 
@@ -49,7 +50,12 @@ class _SeguimientoItemCardState extends State<SeguimientoItemCard> {
             children: <Widget>[
               SizedBox(height: 15.0,),
               ListTile(
-                onTap: (){},
+                onTap: (){
+                  final route = MaterialPageRoute(
+                    builder: ( context ) => SeguimientoSubjectPage(subjectName: widget.subjectName)
+                  );
+                  Navigator.push(context, route);
+                },
                 title: Text(
                   widget.subjectName,
                   textScaleFactor: MediaQuery.of(context).size.width*0.003,
