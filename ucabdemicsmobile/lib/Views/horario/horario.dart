@@ -161,7 +161,7 @@ class _HorarioState extends State<Horario> {
     ];
     double valorBloque = 34.7;
     int horaActual = 7;
-
+  
     List<Widget> lista = new List<Widget>();
     List<String> dias = DatosHorario.getDias();
     List<DatosHorario> horarios =
