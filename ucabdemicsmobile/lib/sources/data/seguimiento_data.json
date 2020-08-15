@@ -1,0 +1,16 @@
+{
+    "cardAsignatura":[
+        {
+            "nombre" : "Algoritmos y Programación I",
+            "nrc" : "25412",
+            "tema_actual" : "Estructura Repetitivas",
+            "porcentaje" : 0.5
+        },
+        {
+            "nombre" : "Sistemas de Base de Datos I",
+            "nrc" : "25896",
+            "tema_actual" : "Diagrama Entidad Relacion",
+            "porcentaje" : 0.2
+        }
+    ]
+}
