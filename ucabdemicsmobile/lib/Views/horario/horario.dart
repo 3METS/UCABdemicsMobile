@@ -159,7 +159,7 @@ class _HorarioState extends State<Horario> {
       Colors.red[800],
       Colors.yellow[800]
     ];
-    double valorBloque = 34.9;
+    double valorBloque = 34.7;
     int horaActual = 7;
 
     List<Widget> lista = new List<Widget>();

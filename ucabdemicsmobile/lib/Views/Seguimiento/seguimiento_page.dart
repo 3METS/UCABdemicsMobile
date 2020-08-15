@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:ucabdemicsmobile/Views/Seguimiento/seguimiento_item_card.dart';
 import 'package:ucabdemicsmobile/Views/Seguimiento/seguimiento_provider.dart';
+import 'package:ucabdemicsmobile/sources/Components/main_appbar.dart';
+import 'package:ucabdemicsmobile/sources/Constants/constants.dart';
 
 class SeguimientoPage extends StatefulWidget {
   SeguimientoPage({Key key}) : super(key: key);
@@ -51,21 +53,19 @@ class _SeguimientoPageState extends State<SeguimientoPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ListView(
-        padding: EdgeInsets.all(MediaQuery.of(context).size.width*0.04),
-        children: <Widget>[
-          ListTile(
-            title: Text(
-              'Seguimineto',
-              textScaleFactor: MediaQuery.of(context).size.width*0.0055,
-              style: TextStyle(
-                color: Color(0xFF1D5066),
-                fontWeight: FontWeight.bold
-              ),
-            ),
-          ),
-          _listCards(),
-        ],
+      appBar: MainAppBar(
+        title: 'Seguimiento',
+        backgroundColor: Colors.white,
+        titleColor: myBlue[4],
+      ),
+      body: Container(
+        color: Colors.white,
+        child: ListView(
+          padding: EdgeInsets.all(MediaQuery.of(context).size.width*0.04),
+          children: <Widget>[
+            _listCards(),
+          ],
+        ),
       ),
     );
   }

@@ -67,7 +67,7 @@ class _SeguimientoItemCardState extends State<SeguimientoItemCard> {
                   widget.nrc,
                   textScaleFactor: MediaQuery.of(context).size.width*0.0022,
                   style: TextStyle(
-                    color: myBlue,
+                    color: Colors.grey,
                     fontWeight: FontWeight.bold
                   ),
                 ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ucabdemicsmobile/Middleware/asignatura/asignatura.dart';
+import 'package:ucabdemicsmobile/Views/NewTest/newtest_page.dart';
 import 'package:ucabdemicsmobile/Views/class_plan_data/competencias.dart';
 import 'package:ucabdemicsmobile/Views/class_plan_data/contenidos.dart';
 import 'package:ucabdemicsmobile/Views/class_plan_data/evaluaciones.dart';
@@ -50,7 +51,8 @@ class _DatosPlanClaseState extends State<DatosPlanClase> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          print(widget.nrc);
+          final route = MaterialPageRoute(builder: (context) => NewTestPage());
+          Navigator.push(context, route);
         },
         child: Icon(Icons.add),
         backgroundColor: myYellow,

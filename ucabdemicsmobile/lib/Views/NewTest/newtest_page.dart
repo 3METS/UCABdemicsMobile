@@ -86,7 +86,7 @@ class _NewTestPageState extends State<NewTestPage> {
                   style: TextStyle(fontSize: 15.0, fontWeight: FontWeight.bold),
                 ),
               ),
-              SizedBox(width: MediaQuery.of(context).size.width * 0.54,),
+              SizedBox(width: MediaQuery.of(context).size.width * 0.43,),
               FlatButton(
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15.0)),
                 color: myGreen[4],
