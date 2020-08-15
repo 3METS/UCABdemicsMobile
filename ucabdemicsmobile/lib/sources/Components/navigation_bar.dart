@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ucabdemicsmobile/Views/Tracing/tracing.dart';
 import '../Constants/constants.dart';
 import '../../Views/class_plan/class_plan.dart';
 
@@ -13,7 +14,7 @@ class _NavigationState extends State<Navigation> {
 
   final tabs = [
     ClassPlan(),
-    Center(child: Text('Seguimiento')),
+    Tracing(),
     Center(child: Text('Horario')),
     Center(child: Text('Notificaciones')),
     Center(child: Text('Ajustes'))
