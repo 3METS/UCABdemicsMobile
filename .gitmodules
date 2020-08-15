@@ -1,0 +1,3 @@
+[submodule "ucabdemicsmobile/vendor/inject.dart"]
+	path = ucabdemicsmobile/vendor/inject.dart
+	url = https://github.com/google/inject.dart
