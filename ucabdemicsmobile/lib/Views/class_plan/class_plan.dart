@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-
-import 'package:ucabdemicsmobile/sources/Constants/constats.dart';
-import 'package:ucabdemicsmobile/Views/MainMenu/subjectcard.dart';
+import '../../sources/Components/main_appbar.dart';
+import '../../sources/Constants/constants.dart';
+import '../../Middleware/semestre/semestre.dart';
+import '../../Middleware/asignatura/datos_asignatura.dart';
+import '../../sources/Components/semestre_card.dart';
 
 class ClassPlan extends StatefulWidget {
 
@@ -12,99 +14,75 @@ class ClassPlan extends StatefulWidget {
 }
 
 class _ClassPlanState extends State<ClassPlan> {
-
-  List<Period> _periods = Period.getPeriod();
-  List<DropdownMenuItem<Period>> _dropdownMenuItems;
-
-  Period _selectedPeriod;
-
-  @override
-  void initState() {
-
-    _dropdownMenuItems = buildDropDownMenuItems(_periods);
-    _selectedPeriod = _dropdownMenuItems[0].value;
-    super.initState();
-
-  }
-
-  List<DropdownMenuItem<Period>> buildDropDownMenuItems(List periods){
-
-    List<DropdownMenuItem<Period>> items = List();
-    for(Period period in periods){
-
-      items.add(DropdownMenuItem(
-          value: period,
-          child: Text(period.year.toString()+period.half.toString()),
-
-        )
-      );
-    }
-    return items;
-
-  }
-
-  onChangeDropDownItem(Period selectedPeriod){
-    setState(() {
-      _selectedPeriod = selectedPeriod;
-    });
-  }
+  String _selectedSemestre = Semestre.getSemestres()[0].value;
+  int _index = 0;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ListView(
-        children: <Widget>[
-          ListTile(
-            title: Text(
-              'Planes de Clase',
-              textScaleFactor: 1.8,
-              style: TextStyle(
-                color: Color(0xFF1D5066),
-                fontWeight: FontWeight.bold
+      backgroundColor: Colors.white,
+      appBar: MainAppBar(
+          title: 'Planes de clase',
+          titleColor: myBlue[4],
+          backgroundColor: Colors.white,),
+      body: Container(
+          height: MediaQuery.of(context).size.height,
+          width: MediaQuery.of(context).size.width,
+          padding: EdgeInsets.all(10.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: <Widget>[
+              _crearDropDownSemestre(),
+              SizedBox(height: 40.0),
+              _crearListAsignaturas(),
+            ],
+          )),
+    );
+  }
+
+  List<DropdownMenuItem<String>> getOpcionesDropDown() {
+    List<DropdownMenuItem<String>> lista = new List();
+
+    Semestre.getSemestres().forEach((element) {
+      lista.add(DropdownMenuItem(
+        child: Text(element.value),
+        value: element.value,
+      ));
+    });
+    return lista;
+  }
+
+  Widget _crearDropDownSemestre() {
+    return DropdownButton(
+      value: _selectedSemestre,
+      items: getOpcionesDropDown(),
+      onChanged: (option) {
+        setState(() {
+          _selectedSemestre = option;
+        });
+      },
+    );
+  }
+
+  Widget _crearListAsignaturas() {
+    return Center(
+      child: SizedBox(
+        height: 500, // card height
+        child: PageView.builder(
+          itemCount: DatosAsignatura.getCantidadAsignaturas(_selectedSemestre),
+          controller: PageController(viewportFraction: 0.7),
+          onPageChanged: (int index) => setState(() => _index = index),
+          itemBuilder: (_, i) {
+            return Transform.scale(
+              scale: i == _index ? 1 : 0.9,
+              child: SemestreCard(
+                selectedSemestre: _selectedSemestre,
+                value: i,
               ),
-            ),
-          ),
-          SizedBox(height:20.0),
-          ListTile(
-            leading: OutlineButton(
-              child: DropdownButton(
-                value: _selectedPeriod,
-                items: _dropdownMenuItems,
-                onChanged: onChangeDropDownItem,
-              ),
-              onPressed: () {},
-            )
-          ),
-          SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
-            child: Row(
-              children: <Widget>[
-                SizedBox(width: 20.0,),
-                periodsubject(),
-                SizedBox(width: 20.0,),
-                periodsubject(),
-              ]
-            )
-          ),
-          ListTile(
-            contentPadding: EdgeInsets.symmetric(horizontal: 30.0),
-            title: Text('Periodo Actual',style: TextStyle(color:Color(0xFF828282)),),
-          ),
-          ListTile(
-            contentPadding: EdgeInsets.symmetric(horizontal: 30.0),
-            title: Text('Sistema de Base de Datos I'),
-            subtitle: Text('6 Evaluaciones'),
-            leading: Icon(Icons.insert_drive_file,color: Color(0xFFFFC526),),
-          ),
-          ListTile(
-            contentPadding: EdgeInsets.symmetric(horizontal: 30.0),
-            title: Text('Sistema de Base de Datos I'),
-            subtitle: Text('6 Evaluaciones'),
-            leading: Icon(Icons.insert_drive_file,color: Color(0xFFFFC526),),
-          ),
-          ListTile(),
-          ListTile(),
-        ],
+            );
+          },
+        ),
       ),
     );
   }

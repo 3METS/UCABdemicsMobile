@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:ucabdemicsmobile/sources/Constants/temas.dart';
-import 'package:ucabdemicsmobile/sources/Constants/constats.dart';
 
 class ThirdStep extends StatefulWidget {
   ThirdStep({Key key}) : super(key: key);

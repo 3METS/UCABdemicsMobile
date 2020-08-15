@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ucabdemicsmobile/sources/Constants/constats.dart';
+import 'package:ucabdemicsmobile/sources/Constants/constants.dart';
 
 Text selectState(int option){
   if( option == 1)

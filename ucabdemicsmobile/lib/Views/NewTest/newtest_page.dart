@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ucabdemicsmobile/Views/NewTest/FirstStep.dart';
 import 'package:ucabdemicsmobile/Views/NewTest/secondstep.dart';
 import 'package:ucabdemicsmobile/Views/NewTest/thirdstep.dart';
-import 'package:ucabdemicsmobile/sources/Constants/constats.dart';
+import 'package:ucabdemicsmobile/sources/Constants/constants.dart';
 
 class NewTestPage extends StatefulWidget {
   NewTestPage({Key key}) : super(key: key);
@@ -32,7 +32,8 @@ class _NewTestPageState extends State<NewTestPage> {
       case "1.0": {
         return ThirdStep();
       }
-      break;
+      default:
+        return Text('No existe');
     }
   }
 
@@ -85,7 +86,7 @@ class _NewTestPageState extends State<NewTestPage> {
                   style: TextStyle(fontSize: 15.0, fontWeight: FontWeight.bold),
                 ),
               ),
-              SizedBox(width: MediaQuery.of(context).size.width * 0.54,),
+              SizedBox(width: MediaQuery.of(context).size.width * 0.43,),
               FlatButton(
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15.0)),
                 color: myGreen[4],

@@ -1,22 +1,22 @@
 import 'package:flutter/material.dart';
 
-import 'package:ucabdemicsmobile/sources/Constants/constats.dart';
+import 'package:ucabdemicsmobile/sources/Constants/constants.dart';
 
 
 final double deviceHeight = 0;
 
-class registerpage extends StatefulWidget {
-  registerpage({Key key}) : super(key: key);
+class Registerpage extends StatefulWidget {
+  Registerpage({Key key}) : super(key: key);
 
   @override
-  _registerpageState createState() => _registerpageState();
+  _RegisterpageState createState() => _RegisterpageState();
 }
 
-class _registerpageState extends State<registerpage> {
+class _RegisterpageState extends State<Registerpage> {
 
 
-  String _email = '';
-  String _password = '';
+  String _email;
+  String _password;
 
   @override
   Widget build(BuildContext context) {

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ucabdemicsmobile/Views/Seguimiento/seguimiento_provider.dart';
 import 'package:ucabdemicsmobile/Views/Seguimiento/seguimiento_subject_page.dart';
-import 'package:ucabdemicsmobile/sources/Constants/constats.dart';
+import 'package:ucabdemicsmobile/sources/Constants/constants.dart';
 import 'package:flutter/foundation.dart';
 
 class SeguimientoItemCard extends StatefulWidget {
@@ -68,7 +67,7 @@ class _SeguimientoItemCardState extends State<SeguimientoItemCard> {
                   widget.nrc,
                   textScaleFactor: MediaQuery.of(context).size.width*0.0022,
                   style: TextStyle(
-                    color: myBlue,
+                    color: Colors.grey,
                     fontWeight: FontWeight.bold
                   ),
                 ),

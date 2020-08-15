@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ucabdemicsmobile/sources/Constants/constats.dart';
+import 'package:ucabdemicsmobile/sources/Constants/constants.dart';
 import 'package:intl/intl.dart';
 
 class NewSolicitudePage extends StatefulWidget {

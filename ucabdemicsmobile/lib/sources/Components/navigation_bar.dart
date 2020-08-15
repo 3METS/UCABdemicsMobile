@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import '../../Views/Seguimiento/seguimiento_page.dart';
 import '../../Views/Solicitude/solicitude_page.dart';
-import '../Constants/constats.dart';
+import 'package:ucabdemicsmobile/Views/horario/horario.dart';
+import '../Constants/constants.dart';
 import '../../Views/class_plan/class_plan.dart';
-import '../../Views/MainMenu/main_menu_page.dart';
 import '../../Views/Settings/setting_page.dart';
 
 class Navigation extends StatefulWidget {
@@ -16,9 +16,9 @@ class Navigation extends StatefulWidget {
 class _NavigationState extends State<Navigation> {
 
   final tabs = [
-    Mainmenupage(),
+    ClassPlan(),
     SeguimientoPage(),
-    Center(child: Text('Horario')),
+    Horario(),
     SolicitudePage(),
     SettingPage()
   ];
@@ -38,7 +38,7 @@ class _NavigationState extends State<Navigation> {
           backgroundColor: myGreen,
           selectedItemColor: Colors.white,
           showUnselectedLabels: false,
-          showSelectedLabels: true,
+          showSelectedLabels: false,
           items: [
             BottomNavigationBarItem(
               icon: Icon(Icons.assignment),

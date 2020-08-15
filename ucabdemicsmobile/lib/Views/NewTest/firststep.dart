@@ -8,7 +8,7 @@ class FirstStep extends StatefulWidget {
 }
 
 class _FirstStepState extends State<FirstStep> {
-  String dropdownValue = null;
+  String dropdownValue;
 
   Widget dropmenu(){
     return DropdownButton<String>(

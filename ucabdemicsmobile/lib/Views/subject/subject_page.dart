@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ucabdemicsmobile/Views/NewTest/newtest_page.dart';
-import 'package:ucabdemicsmobile/sources/Constants/constats.dart';
+import 'package:ucabdemicsmobile/sources/Constants/constants.dart';
 
 class SubjectPage extends StatefulWidget {
   SubjectPage({Key key}) : super(key: key);
