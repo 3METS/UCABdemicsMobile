@@ -121,7 +121,9 @@ class _NewSolicitudePageState extends State<NewSolicitudePage> {
         width: MediaQuery.of(context).size.width*0.3,
         height: MediaQuery.of(context).size.height*0.05,
         child: FlatButton(
-          onPressed: (){},
+          onPressed: (){
+            Navigator.of(context).pop();
+          },
           child: Text('Finalizar',textScaleFactor: MediaQuery.of(context).size.width*0.002, style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),),
           color: myGreen,
           shape: new RoundedRectangleBorder(borderRadius: new BorderRadius.circular(10.0))
