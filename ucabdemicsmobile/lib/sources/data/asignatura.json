@@ -1,0 +1,48 @@
+{
+    "asignaturas":[
+        {
+            "nrc":25001,
+            "nombre":"Algoritmos y programación I"
+        },
+        {
+            "nrc":25002,
+            "nombre":"Sistema de Base de Datos I"
+        },
+        {
+            "nrc":25003,
+            "nombre":"Electiva: Calidad del Software"
+        },
+        {
+            "nrc":25004,
+            "nombre":"Ingenieria del Software"
+        },
+        {
+            "nrc":25005,
+            "nombre":"Sistema de Base de Datos II"
+        },
+        {
+            "nrc":25006,
+            "nombre":"Sistema Operativos"
+        },
+        {
+            "nrc":25007,
+            "nombre":"Interacción Humano Computador"
+        },
+        {
+            "nrc":14001,
+            "nombre":"Algoritmos y programación III"
+        },
+        {
+            "nrc":14002,
+            "nombre":"Calculo II"
+        },
+        {
+            "nrc":14003,
+            "nombre":"Matematicas Discretas"
+        },
+        {
+            "nrc":14004,
+            "nombre":"Desarrollo del Software"
+        }
+    ]
+}
